@@ -1,14 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\WSA.Microservice.Template.Application\WSA.Microservice.Template.Application.csproj" />
-    <ProjectReference Include="..\WSA.Microservice.Template.Persistence\WSA.Microservice.Template.Persistence.csproj" />
+    <ProjectReference Include="..\WSA.Microservice.Template.Domain\WSA.Microservice.Template.Domain.csproj" />
   </ItemGroup>
 
 </Project>

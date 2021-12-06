@@ -15,6 +15,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebJobs", "WebJobs", "{ACFE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSA.Microservice.Template.Web", "WSA.Microservice.Template.Web\WSA.Microservice.Template.Web.csproj", "{63DBDD6B-84AF-4072-AC10-1B16499A357C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSA.Microservice.Template.Application", "WSA.Microservice.Template.Application\WSA.Microservice.Template.Application.csproj", "{9ED59E17-430B-4328-B864-D80D71F94F12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSA.Microservice.Template.Domain", "WSA.Microservice.Template.Domain\WSA.Microservice.Template.Domain.csproj", "{AAB0ADB5-77A6-4BA9-928D-DA140F9D3A20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSA.Microservice.Template.Persistence", "WSA.Microservice.Template.Persistence\WSA.Microservice.Template.Persistence.csproj", "{A7BF3FF2-F3E0-4154-BA15-B3E5FA8A74D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSA.Microservice.Template.Inbound.WebJob", "WSA.Microservice.Template.Inbound.WebJob\WSA.Microservice.Template.Inbound.WebJob.csproj", "{7922050C-BCBC-48B9-A16F-F040F4284C9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,12 +33,32 @@ Global
 		{63DBDD6B-84AF-4072-AC10-1B16499A357C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63DBDD6B-84AF-4072-AC10-1B16499A357C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63DBDD6B-84AF-4072-AC10-1B16499A357C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ED59E17-430B-4328-B864-D80D71F94F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ED59E17-430B-4328-B864-D80D71F94F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ED59E17-430B-4328-B864-D80D71F94F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED59E17-430B-4328-B864-D80D71F94F12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAB0ADB5-77A6-4BA9-928D-DA140F9D3A20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAB0ADB5-77A6-4BA9-928D-DA140F9D3A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAB0ADB5-77A6-4BA9-928D-DA140F9D3A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAB0ADB5-77A6-4BA9-928D-DA140F9D3A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7BF3FF2-F3E0-4154-BA15-B3E5FA8A74D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7BF3FF2-F3E0-4154-BA15-B3E5FA8A74D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7BF3FF2-F3E0-4154-BA15-B3E5FA8A74D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7BF3FF2-F3E0-4154-BA15-B3E5FA8A74D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7922050C-BCBC-48B9-A16F-F040F4284C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7922050C-BCBC-48B9-A16F-F040F4284C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7922050C-BCBC-48B9-A16F-F040F4284C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7922050C-BCBC-48B9-A16F-F040F4284C9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{63DBDD6B-84AF-4072-AC10-1B16499A357C} = {B128C5DD-9E76-4E92-BA52-C87C80C22E93}
+		{9ED59E17-430B-4328-B864-D80D71F94F12} = {16D9D0A2-B82C-4BCB-A649-656DB7CEEF03}
+		{AAB0ADB5-77A6-4BA9-928D-DA140F9D3A20} = {16D9D0A2-B82C-4BCB-A649-656DB7CEEF03}
+		{A7BF3FF2-F3E0-4154-BA15-B3E5FA8A74D1} = {08429F69-FAE4-40E7-930C-A9373C8B9074}
+		{7922050C-BCBC-48B9-A16F-F040F4284C9A} = {ACFEEDB1-A740-4621-8824-140DB7B5888C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E1C55B19-56BD-4E65-88B0-5ACE58C0C712}
