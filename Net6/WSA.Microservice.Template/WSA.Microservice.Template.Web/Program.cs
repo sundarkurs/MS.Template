@@ -10,7 +10,7 @@ using WSA.Microservice.Template.Web.Logger;
 
 var builder = WebApplication.CreateBuilder(args);
 
-ConfigureConfiguration(builder.Configuration);
+ConfigureConfiguration(builder);
 
 ConfigureServices(builder.Services, builder.Configuration);
 
@@ -25,20 +25,26 @@ app.Run();
 
 #region Configure Methods
 
-void ConfigureConfiguration(ConfigurationManager configuration)
+void ConfigureConfiguration(WebApplicationBuilder builder)
 {
     var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 
-    configuration.AddJsonFile($"appsettings.{environment}.json", optional: true, reloadOnChange: true);
+    builder.Configuration.AddJsonFile($"appsettings.{environment}.json", optional: true, reloadOnChange: true);
+
+    builder.Logging.AddApplicationInsights();
+
+    builder.Logging.AddLog4Net(Environment.CurrentDirectory + @"\log4net.config", true);
 }
 
 void ConfigureServices(IServiceCollection services, ConfigurationManager configuration)
 {
     services.AddSingleton<ITelemetryInitializer>(new CloudRoleNameTelemetryInitializer(configuration.GetValue<string>("appInsights:WebApp:CloudRoleName")));
+
     services.AddApplicationInsightsTelemetry(options =>
     {
         options.InstrumentationKey = configuration.GetValue<string>("appInsights:iKey");
     });
+
     services.Configure<CookiePolicyOptions>(options =>
     {
         // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -63,7 +69,9 @@ void ConfigureServices(IServiceCollection services, ConfigurationManager configu
     });
 
     services.AddControllersWithViews();
+
     services.AddRazorPages().AddMicrosoftIdentityUI();
+
     services.AddSingleton<IAuthorizationHandler, ViewTokenAuthorizationHandler>();
 };
 
@@ -82,12 +90,15 @@ void ConfigureMiddleware(WebApplication app)
     }
 
     app.UseHttpsRedirection();
+
     app.UseStaticFiles();
 
     app.UseRouting();
 
     app.UseCookiePolicy();
+
     app.UseAuthentication();
+
     app.UseAuthorization();
 };
 
