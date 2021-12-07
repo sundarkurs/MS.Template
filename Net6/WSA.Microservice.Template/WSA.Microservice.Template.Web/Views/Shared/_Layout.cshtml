@@ -26,6 +26,13 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
+                    <div style="display: flex; align-items: center;">
+                        Welcome &nbsp;<b>@User.Identity.Name</b>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a class="nav-link" asp-area="" asp-controller="Account" asp-action="SignOut">Sign out</a>
+                        }
+                    </div>
                 </div>
             </div>
         </nav>

@@ -7,6 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.19.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.Log4NetAppender" Version="2.19.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.Web" Version="2.19.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.ApplicationInsights" Version="2.19.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.21.1" />
+    <PackageReference Include="Microsoft.Identity.Web.UI" Version="1.21.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\WSA.Microservice.Template.Application\WSA.Microservice.Template.Application.csproj" />
     <ProjectReference Include="..\WSA.Microservice.Template.Persistence\WSA.Microservice.Template.Persistence.csproj" />
   </ItemGroup>
