@@ -4,7 +4,7 @@ using WSA.Microservice.Template.Web.Models;
 
 namespace WSA.Microservice.Template.Web.Controllers
 {
-    public class HomeController : BaseController
+    public class HomeController : BaseMvcController
     {
         private readonly ILogger<HomeController> _logger;
 
