@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WSA.Microservice.Template.Application.Queries.Configuration;
 
 namespace WSA.Microservice.Template.Web.Controllers.Api
 {
@@ -15,6 +16,12 @@ namespace WSA.Microservice.Template.Web.Controllers.Api
         public async Task<IActionResult> GetAsync()
         {
             return Ok("Success");
+        }
+
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetAsync(int id)
+        {
+            return Ok(await Mediator.Send(new GetConfiguration.Query { Id = id }));
         }
     }
 }

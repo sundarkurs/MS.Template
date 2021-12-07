@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace WSA.Microservice.Template.Domain.Entities
 {
-    public partial class Configuration
+    public partial class Config
     {
         public int Id { get; set; }
         public string? Name { get; set; }

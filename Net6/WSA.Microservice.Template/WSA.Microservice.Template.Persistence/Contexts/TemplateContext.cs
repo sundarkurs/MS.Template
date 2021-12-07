@@ -13,7 +13,7 @@ namespace WSA.Microservice.Template.Persistence.Contexts
         {
         }
 
-        public virtual DbSet<Domain.Entities.Configuration> Configurations { get; set; } = null!;
+        public virtual DbSet<Domain.Entities.Config> Configurations { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -25,11 +25,11 @@ namespace WSA.Microservice.Template.Persistence.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Domain.Entities.Configuration>(entity =>
+            modelBuilder.Entity<Domain.Entities.Config>(entity =>
             {
                 entity.HasNoKey();
 
-                entity.ToTable("Configuration");
+                entity.ToTable("Config");
 
                 entity.Property(e => e.Description)
                     .HasMaxLength(1000)

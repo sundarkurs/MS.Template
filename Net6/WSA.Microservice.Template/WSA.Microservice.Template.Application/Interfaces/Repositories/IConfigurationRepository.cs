@@ -1,6 +1,8 @@
-﻿namespace WSA.Microservice.Template.Application.Interfaces.Repositories
+﻿using WSA.Microservice.Template.Domain.Entities;
+
+namespace WSA.Microservice.Template.Application.Interfaces.Repositories
 {
-    public interface IConfigurationRepository<T> : IBaseRepository<T> where T : class
+    public interface IConfigurationRepository : IBaseRepository<Config>
     {
     }
 }

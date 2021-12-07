@@ -1,16 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WSA.Microservice.Template.Application.Interfaces.Repositories;
+using WSA.Microservice.Template.Domain.Entities;
 using WSA.Microservice.Template.Persistence.Contexts;
 
 namespace WSA.Microservice.Template.Persistence.Repositories
 {
-    public class ConfigurationRepository<T> : BaseRepository<T>, IConfigurationRepository<T> where T : class
+    public class ConfigurationRepository : BaseRepository<Config>, IConfigurationRepository
     {
-        private readonly DbSet<T> _configurations;
+        private readonly DbSet<Config> _configurations;
 
         public ConfigurationRepository(TemplateContext dbContext) : base(dbContext)
         {
-            _configurations = dbContext.Set<T>();
+            _configurations = dbContext.Set<Config>();
         }
     }
 }
