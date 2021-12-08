@@ -13,5 +13,10 @@ namespace WSA.Microservice.Template.Persistence.Repositories
         {
             _configs = dbContext.Set<Config>();
         }
+
+        public Task<bool> IsNameUniqueAsync(string name)
+        {
+            return _configs.AllAsync(p => p.Name != name);
+        }
     }
 }
