@@ -9,6 +9,7 @@ using WSA.Microservice.Template.Application;
 using WSA.Microservice.Template.Persistence;
 using WSA.Microservice.Template.Web.Auth;
 using WSA.Microservice.Template.Web.Logger;
+using WSA.Microservice.Template.Web.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -105,6 +106,8 @@ void ConfigureMiddleware(WebApplication app)
     app.UseAuthentication();
 
     app.UseAuthorization();
+
+    app.UseMiddleware<ErrorHandlerMiddleware>();
 };
 
 void ConfigureEndpoints(WebApplication app)
