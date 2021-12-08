@@ -7,7 +7,7 @@ using WSA.Microservice.Template.Persistence.Repositories;
 
 namespace WSA.Microservice.Template.Persistence
 {
-    public static class ServiceRegistration
+    public static class DependencyInjection
     {
         public static void AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
         {  

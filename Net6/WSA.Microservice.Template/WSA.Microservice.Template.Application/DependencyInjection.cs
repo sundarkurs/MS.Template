@@ -6,7 +6,7 @@ using WSA.Microservice.Template.Application.Behaviours;
 
 namespace WSA.Microservice.Template.Application
 {
-    public static class ServiceRegistration
+    public static class DependencyInjection
     {
         public static void AddApplicationServices(this IServiceCollection services)
         {
