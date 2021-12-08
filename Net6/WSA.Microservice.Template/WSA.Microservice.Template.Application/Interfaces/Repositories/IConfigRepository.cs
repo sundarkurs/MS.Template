@@ -2,7 +2,7 @@
 
 namespace WSA.Microservice.Template.Application.Interfaces.Repositories
 {
-    public interface IConfigurationRepository : IBaseRepository<Config>
+    public interface IConfigRepository : IBaseRepository<Config>
     {
     }
 }

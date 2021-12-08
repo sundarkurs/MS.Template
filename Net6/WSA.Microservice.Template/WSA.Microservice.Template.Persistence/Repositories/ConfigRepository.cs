@@ -5,13 +5,13 @@ using WSA.Microservice.Template.Persistence.Contexts;
 
 namespace WSA.Microservice.Template.Persistence.Repositories
 {
-    public class ConfigurationRepository : BaseRepository<Config>, IConfigurationRepository
+    public class ConfigRepository : BaseRepository<Config>, IConfigRepository
     {
-        private readonly DbSet<Config> _configurations;
+        private readonly DbSet<Config> _configs;
 
-        public ConfigurationRepository(TemplateContext dbContext) : base(dbContext)
+        public ConfigRepository(TemplateContext dbContext) : base(dbContext)
         {
-            _configurations = dbContext.Set<Config>();
+            _configs = dbContext.Set<Config>();
         }
     }
 }

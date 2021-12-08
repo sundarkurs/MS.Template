@@ -8,7 +8,7 @@ namespace WSA.Microservice.Template.Application.Mappers
     {
         public ApplicationProfile()
         {
-            CreateMap<Config, ConfigurationDto>().ReverseMap();
+            CreateMap<Config, ConfigDto>().ReverseMap();
         }
     }
 }
