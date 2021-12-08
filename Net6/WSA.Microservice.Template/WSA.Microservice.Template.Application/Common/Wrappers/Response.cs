@@ -1,4 +1,4 @@
-﻿namespace WSA.Microservice.Template.Application.Wrappers
+﻿namespace WSA.Microservice.Template.Application.Common.Wrappers
 {
     public class Response<T>
     {

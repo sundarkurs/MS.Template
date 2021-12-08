@@ -2,7 +2,7 @@
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using WSA.Microservice.Template.Application.Behaviours;
+using WSA.Microservice.Template.Application.Common.Behaviours;
 
 namespace WSA.Microservice.Template.Application
 {

@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace WSA.Microservice.Template.Application.Exceptions
+namespace WSA.Microservice.Template.Application.Common.Exceptions
 {
     public class ApiException : Exception
     {

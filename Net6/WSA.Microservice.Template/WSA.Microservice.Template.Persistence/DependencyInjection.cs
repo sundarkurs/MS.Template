@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using WSA.Microservice.Template.Application.Interfaces.Repositories;
+using WSA.Microservice.Template.Application.Common.Interfaces.Repositories;
 using WSA.Microservice.Template.Persistence.Contexts;
 using WSA.Microservice.Template.Persistence.Repositories;
 

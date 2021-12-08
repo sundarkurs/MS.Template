@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
-using WSA.Microservice.Template.Application.Interfaces.Repositories;
+using WSA.Microservice.Template.Application.Common.Interfaces.Repositories;
 using WSA.Microservice.Template.Persistence.Contexts;
 
 namespace WSA.Microservice.Template.Persistence.Repositories

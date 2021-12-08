@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Text.Json;
-using WSA.Microservice.Template.Application.Exceptions;
-using WSA.Microservice.Template.Application.Wrappers;
+using WSA.Microservice.Template.Application.Common.Exceptions;
+using WSA.Microservice.Template.Application.Common.Wrappers;
 
 namespace WSA.Microservice.Template.Web.Middlewares
 {
@@ -28,7 +28,7 @@ namespace WSA.Microservice.Template.Web.Middlewares
 
                 switch (error)
                 {
-                    case Application.Exceptions.ApiException e:
+                    case Application.Common.Exceptions.ApiException e:
                         response.StatusCode = (int)HttpStatusCode.BadRequest;
                         break;
                     case ValidationException e:

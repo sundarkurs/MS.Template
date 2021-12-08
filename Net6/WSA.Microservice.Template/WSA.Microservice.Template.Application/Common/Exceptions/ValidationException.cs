@@ -1,6 +1,6 @@
 ﻿using FluentValidation.Results;
 
-namespace WSA.Microservice.Template.Application.Exceptions
+namespace WSA.Microservice.Template.Application.Common.Exceptions
 {
     public class ValidationException : Exception
     {

@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using WSA.Microservice.Template.Application.DTO;
+using WSA.Microservice.Template.Application.Common.DTO;
 using WSA.Microservice.Template.Domain.Entities;
 
-namespace WSA.Microservice.Template.Application.Mappers
+namespace WSA.Microservice.Template.Application.Common.Mappings
 {
     public class ApplicationProfile : Profile
     {

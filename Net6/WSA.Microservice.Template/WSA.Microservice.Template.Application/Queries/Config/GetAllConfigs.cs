@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using MediatR;
-using WSA.Microservice.Template.Application.DTO;
-using WSA.Microservice.Template.Application.Interfaces.Repositories;
-using WSA.Microservice.Template.Application.Wrappers;
+using WSA.Microservice.Template.Application.Common.DTO;
+using WSA.Microservice.Template.Application.Common.Interfaces.Repositories;
+using WSA.Microservice.Template.Application.Common.Wrappers;
 
 namespace WSA.Microservice.Template.Application.Queries.Config
 {

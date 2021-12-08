@@ -1,6 +1,6 @@
 ﻿using WSA.Microservice.Template.Domain.Entities;
 
-namespace WSA.Microservice.Template.Application.Interfaces.Repositories
+namespace WSA.Microservice.Template.Application.Common.Interfaces.Repositories
 {
     public interface IConfigRepository : IBaseRepository<Config>
     {

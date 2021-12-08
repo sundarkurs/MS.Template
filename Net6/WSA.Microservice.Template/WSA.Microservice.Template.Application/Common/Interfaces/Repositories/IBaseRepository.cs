@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace WSA.Microservice.Template.Application.Interfaces.Repositories
+namespace WSA.Microservice.Template.Application.Common.Interfaces.Repositories
 {
     public interface IBaseRepository<T> where T : class
     {

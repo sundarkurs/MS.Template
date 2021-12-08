@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WSA.Microservice.Template.Application.Commands.Config;
-using WSA.Microservice.Template.Application.DTO;
+using WSA.Microservice.Template.Application.Common.DTO;
 using WSA.Microservice.Template.Application.Queries.Config;
 
 namespace WSA.Microservice.Template.Web.Controllers.Api

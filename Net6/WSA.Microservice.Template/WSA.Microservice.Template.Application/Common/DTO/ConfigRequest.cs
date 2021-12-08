@@ -1,4 +1,4 @@
-﻿namespace WSA.Microservice.Template.Application.DTO
+﻿namespace WSA.Microservice.Template.Application.Common.DTO
 {
     public class ConfigRequest
     {

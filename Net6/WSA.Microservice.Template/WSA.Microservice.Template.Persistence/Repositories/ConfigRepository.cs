@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WSA.Microservice.Template.Application.Interfaces.Repositories;
+using WSA.Microservice.Template.Application.Common.Interfaces.Repositories;
 using WSA.Microservice.Template.Domain.Entities;
 using WSA.Microservice.Template.Persistence.Contexts;
 
