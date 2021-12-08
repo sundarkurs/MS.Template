@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using WSA.Microservice.Template.Domain.Entities;
 
 namespace WSA.Microservice.Template.Persistence.Contexts
 {
@@ -13,7 +14,7 @@ namespace WSA.Microservice.Template.Persistence.Contexts
         {
         }
 
-        public virtual DbSet<Domain.Entities.Config> Configurations { get; set; } = null!;
+        public virtual DbSet<Config> Configs { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -25,17 +26,13 @@ namespace WSA.Microservice.Template.Persistence.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Domain.Entities.Config>(entity =>
+            modelBuilder.Entity<Config>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.ToTable("Config");
 
                 entity.Property(e => e.Description)
                     .HasMaxLength(1000)
                     .IsUnicode(false);
-
-                entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
                 entity.Property(e => e.Name)
                     .HasMaxLength(250)

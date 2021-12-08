@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace WSA.Microservice.Template.Domain.Entities
+﻿namespace WSA.Microservice.Template.Domain.Entities
 {
     public partial class Config
     {
