@@ -35,6 +35,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{2CC61E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E5DFFD1B-7B30-4F47-BDF6-BC61FB4B3566}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSA.Microservice.Template.WebJob.InboundProcess", "WSA.Microservice.Template.WebJob.InboundProcess\WSA.Microservice.Template.WebJob.InboundProcess.csproj", "{DD3521B9-AE0B-41E3-A13F-E8CFC5E6907E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{FF914732-3A2E-445A-A0DA-62B5699F607B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF914732-3A2E-445A-A0DA-62B5699F607B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF914732-3A2E-445A-A0DA-62B5699F607B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD3521B9-AE0B-41E3-A13F-E8CFC5E6907E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD3521B9-AE0B-41E3-A13F-E8CFC5E6907E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD3521B9-AE0B-41E3-A13F-E8CFC5E6907E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD3521B9-AE0B-41E3-A13F-E8CFC5E6907E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +101,7 @@ Global
 		{F57941BF-4F47-4A42-8DD6-458CA21C3AAA} = {98ADBED6-0809-489D-88C1-597C26ADE175}
 		{7819CB22-890A-488A-B903-396BA2382045} = {98ADBED6-0809-489D-88C1-597C26ADE175}
 		{FF914732-3A2E-445A-A0DA-62B5699F607B} = {98ADBED6-0809-489D-88C1-597C26ADE175}
+		{DD3521B9-AE0B-41E3-A13F-E8CFC5E6907E} = {ACFEEDB1-A740-4621-8824-140DB7B5888C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E1C55B19-56BD-4E65-88B0-5ACE58C0C712}
