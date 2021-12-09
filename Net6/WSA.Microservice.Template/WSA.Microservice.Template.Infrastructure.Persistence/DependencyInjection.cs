@@ -2,10 +2,10 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WSA.Microservice.Template.Application.Common.Interfaces.Repositories;
-using WSA.Microservice.Template.Persistence.Contexts;
-using WSA.Microservice.Template.Persistence.Repositories;
+using WSA.Microservice.Template.Infrastructure.Persistence.Contexts;
+using WSA.Microservice.Template.Infrastructure.Persistence.Repositories;
 
-namespace WSA.Microservice.Template.Persistence
+namespace WSA.Microservice.Template.Infrastructure.Persistence
 {
     public static class DependencyInjection
     {

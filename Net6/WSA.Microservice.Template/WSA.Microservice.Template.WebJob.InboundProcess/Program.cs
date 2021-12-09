@@ -4,7 +4,7 @@ using Microsoft.Extensions.Hosting;
 using WSA.Microservice.Template.Application;
 using WSA.Microservice.Template.WebJob.InboundProcess;
 using WSA.Microservice.Template.WebJob.InboundProcess.Extensions;
-using WSA.Microservice.Template.Persistence;
+using WSA.Microservice.Template.Infrastructure.Persistence;
 
 IConfiguration Configuration;
 

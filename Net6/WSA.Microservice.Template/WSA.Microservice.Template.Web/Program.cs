@@ -6,7 +6,7 @@ using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
 using System.Security.Claims;
 using WSA.Microservice.Template.Application;
-using WSA.Microservice.Template.Persistence;
+using WSA.Microservice.Template.Infrastructure.Persistence;
 using WSA.Microservice.Template.Web.Auth;
 using WSA.Microservice.Template.Web.Logger;
 using WSA.Microservice.Template.Web.Middlewares;

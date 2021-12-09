@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WSA.Microservice.Template.Application\WSA.Microservice.Template.Application.csproj" />
-    <ProjectReference Include="..\WSA.Microservice.Template.Persistence\WSA.Microservice.Template.Persistence.csproj" />
+    <ProjectReference Include="..\WSA.Microservice.Template.Infrastructure.Persistence\WSA.Microservice.Template.Infrastructure.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

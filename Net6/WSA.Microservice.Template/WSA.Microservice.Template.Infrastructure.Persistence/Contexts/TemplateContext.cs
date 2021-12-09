@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WSA.Microservice.Template.Domain.Entities;
 
-namespace WSA.Microservice.Template.Persistence.Contexts
+namespace WSA.Microservice.Template.Infrastructure.Persistence.Contexts
 {
     public partial class TemplateContext : DbContext
     {
