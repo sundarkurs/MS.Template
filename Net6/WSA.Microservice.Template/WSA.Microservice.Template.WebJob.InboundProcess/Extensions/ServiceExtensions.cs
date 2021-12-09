@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using WSA.Microservice.Template.Inbound.WebJob.Interfaces;
+using WSA.Microservice.Template.WebJob.InboundProcess.Interfaces;
 
-namespace WSA.Microservice.Template.Inbound.WebJob.Extensions
+namespace WSA.Microservice.Template.WebJob.InboundProcess.Extensions
 {
     public static class ServiceExtensions
     {

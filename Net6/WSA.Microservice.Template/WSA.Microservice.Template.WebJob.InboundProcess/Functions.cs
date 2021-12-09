@@ -1,8 +1,8 @@
 ﻿using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
-using WSA.Microservice.Template.Inbound.WebJob.Interfaces;
+using WSA.Microservice.Template.WebJob.InboundProcess.Interfaces;
 
-namespace WSA.Microservice.Template.Inbound.WebJob
+namespace WSA.Microservice.Template.WebJob.InboundProcess
 {
     public class Functions
     {

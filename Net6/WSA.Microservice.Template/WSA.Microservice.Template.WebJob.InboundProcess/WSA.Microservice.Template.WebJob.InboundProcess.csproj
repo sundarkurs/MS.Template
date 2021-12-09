@@ -39,5 +39,10 @@
 			<DependentUpon>appsettings.json</DependentUpon>
 		</None>
 	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Configuration\" />
+	  <Folder Include="Interfaces\" />
+	  <Folder Include="Services\" />
+	</ItemGroup>
 
 </Project>

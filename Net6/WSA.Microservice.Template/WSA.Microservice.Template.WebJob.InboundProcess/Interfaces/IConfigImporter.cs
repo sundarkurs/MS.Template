@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace WSA.Microservice.Template.Inbound.WebJob.Interfaces
+namespace WSA.Microservice.Template.WebJob.InboundProcess.Interfaces
 {
     public interface IConfigImporter
     {

@@ -1,9 +1,9 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Logging;
 using WSA.Microservice.Template.Application.Queries.Config;
-using WSA.Microservice.Template.Inbound.WebJob.Interfaces;
+using WSA.Microservice.Template.WebJob.InboundProcess.Interfaces;
 
-namespace WSA.Microservice.Template.Inbound.WebJob.Services
+namespace WSA.Microservice.Template.WebJob.InboundProcess.Services
 {
     public class ConfigImporter : IConfigImporter
     {
