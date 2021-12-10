@@ -2,8 +2,8 @@
 
 namespace WSA.Microservice.Template.Application.Common.Interfaces.Repositories
 {
-    public interface IConfigRepository : IBaseRepository<Config>
+    public interface ITodoRepository : IBaseRepository<Todo>
     {
-        Task<bool> IsNameUniqueAsync(string code);
+        Task<bool> IsTitleUniqueAsync(string code);
     }
 }

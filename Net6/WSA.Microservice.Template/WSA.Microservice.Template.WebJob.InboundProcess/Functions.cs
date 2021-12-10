@@ -7,19 +7,19 @@ namespace WSA.Microservice.Template.WebJob.InboundProcess
     public class Functions
     {
         private readonly ILogger<Functions> _logger;
-        private readonly IConfigImporter _configImporter;
+        private readonly ITodoImporter _todoImporter;
 
-        public Functions(ILogger<Functions> logger, IConfigImporter configImporter)
+        public Functions(ILogger<Functions> logger, ITodoImporter todoImporter)
         {
             _logger = logger;
-            _configImporter = configImporter;
+            _todoImporter = todoImporter;
         }
 
         [NoAutomaticTrigger]
         public async Task RunAsync(TextWriter writer, CancellationToken cancellationToken)
         {
             writer.WriteLine($"{nameof(RunAsync)} started at {DateTime.UtcNow}");
-            await _configImporter.ProcessAsync();
+            await _todoImporter.ProcessAsync();
         }
     }
 }

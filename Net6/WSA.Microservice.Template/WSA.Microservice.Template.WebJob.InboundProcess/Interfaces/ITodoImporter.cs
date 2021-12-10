@@ -1,8 +1,7 @@
-﻿using System.Threading.Tasks;
-
+﻿
 namespace WSA.Microservice.Template.WebJob.InboundProcess.Interfaces
 {
-    public interface IConfigImporter
+    public interface ITodoImporter
     {
         Task ProcessAsync();
     }

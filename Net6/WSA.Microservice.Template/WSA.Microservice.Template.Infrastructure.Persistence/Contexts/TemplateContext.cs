@@ -14,7 +14,7 @@ namespace WSA.Microservice.Template.Infrastructure.Persistence.Contexts
         {
         }
 
-        public virtual DbSet<Config> Configs { get; set; } = null!;
+        public virtual DbSet<Todo> Todos { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -26,15 +26,15 @@ namespace WSA.Microservice.Template.Infrastructure.Persistence.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Config>(entity =>
+            modelBuilder.Entity<Todo>(entity =>
             {
-                entity.ToTable("Config");
+                entity.ToTable("Todo");
 
                 entity.Property(e => e.Description)
                     .HasMaxLength(1000)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Name)
+                entity.Property(e => e.Title)
                     .HasMaxLength(250)
                     .IsUnicode(false);
             });

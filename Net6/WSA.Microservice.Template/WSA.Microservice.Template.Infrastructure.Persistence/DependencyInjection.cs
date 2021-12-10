@@ -19,7 +19,7 @@ namespace WSA.Microservice.Template.Infrastructure.Persistence
 
             // Repositories
             services.AddTransient(typeof(IBaseRepository<>), typeof(BaseRepository<>));
-            services.AddTransient<IConfigRepository, ConfigRepository>();
+            services.AddTransient<ITodoRepository, TodoRepository>();
         }
     }
 }

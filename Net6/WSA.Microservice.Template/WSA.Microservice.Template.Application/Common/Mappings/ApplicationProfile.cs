@@ -8,8 +8,8 @@ namespace WSA.Microservice.Template.Application.Common.Mappings
     {
         public ApplicationProfile()
         {
-            CreateMap<Config, ConfigDto>().ReverseMap();
-            CreateMap<ConfigRequest, Config>();
+            CreateMap<Todo, TodoDto>().ReverseMap();
+            CreateMap<TodoRequest, Todo>();
         }
     }
 }

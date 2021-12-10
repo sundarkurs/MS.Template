@@ -5,18 +5,18 @@ using WSA.Microservice.Template.Infrastructure.Persistence.Contexts;
 
 namespace WSA.Microservice.Template.Infrastructure.Persistence.Repositories
 {
-    public class ConfigRepository : BaseRepository<Config>, IConfigRepository
+    public class TodoRepository : BaseRepository<Todo>, ITodoRepository
     {
-        private readonly DbSet<Config> _configs;
+        private readonly DbSet<Todo> _todos;
 
-        public ConfigRepository(TemplateContext dbContext) : base(dbContext)
+        public TodoRepository(TemplateContext dbContext) : base(dbContext)
         {
-            _configs = dbContext.Set<Config>();
+            _todos = dbContext.Set<Todo>();
         }
 
-        public Task<bool> IsNameUniqueAsync(string name)
+        public Task<bool> IsTitleUniqueAsync(string title)
         {
-            return _configs.AllAsync(p => p.Name != name);
+            return _todos.AllAsync(p => p.Title != title);
         }
     }
 }

@@ -8,15 +8,12 @@ namespace WSA.Microservice.Template.WebJob.InboundProcess.Extensions
     {
         public static void AddServices(this IServiceCollection services)
         {
-            services.AddTransient<IConfigImporter, Services.ConfigImporter>();
+            services.AddTransient<ITodoImporter, Services.TodoImporter>();
         }
 
         public static void AddConfigurations(this IServiceCollection services, HostBuilderContext context)
         {
-            //services.Configure<AppSettings>(context.Configuration.GetSection("AppSettings"));
-            //services.Configure<ConnectionStrings>(context.Configuration.GetSection("ConnectionStrings"));
-            //services.Configure<MailSettings>(context.Configuration.GetSection("MailSettings"));
-            //services.Configure<StorageSettings>(context.Configuration.GetSection("StorageSettings"));
+            
         }
     }
 }
