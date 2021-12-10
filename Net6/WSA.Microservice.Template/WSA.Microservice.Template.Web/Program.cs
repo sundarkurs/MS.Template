@@ -8,6 +8,7 @@ using System.Security.Claims;
 using WSA.Microservice.Template.Application;
 using WSA.Microservice.Template.Infrastructure.Persistence;
 using WSA.Microservice.Template.Web.Auth;
+using WSA.Microservice.Template.Web.Extensions;
 using WSA.Microservice.Template.Web.Logger;
 using WSA.Microservice.Template.Web.Middlewares;
 
@@ -16,6 +17,8 @@ var builder = WebApplication.CreateBuilder(args);
 ConfigureConfiguration(builder);
 
 ConfigureServices(builder.Services, builder.Configuration);
+
+builder.Services.AddSwaggerExtension();
 
 var app = builder.Build();
 
@@ -93,6 +96,7 @@ void ConfigureMiddleware(WebApplication app)
     {
         app.UseExceptionHandler("/Home/Error");
         app.UseHsts();
+        app.UseSwaggerExtension();
     }
 
     app.UseHttpsRedirection();
@@ -107,7 +111,7 @@ void ConfigureMiddleware(WebApplication app)
 
     app.UseAuthorization();
 
-    app.UseMiddleware<ErrorHandlerMiddleware>();
+    app.UseErrorHandlingMiddleware();
 };
 
 void ConfigureEndpoints(WebApplication app)
