@@ -32,5 +32,19 @@ namespace WSA.Microservice.Template.Web.Controllers.Api
             var response = await Mediator.Send(new CreateTodo.Command { Todo = todo });
             return Ok(response);
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateAsync(int id, TodoRequest todo)
+        {
+            var response = await Mediator.Send(new UpdateTodo.Command { Id = id, Todo = todo });
+            return Ok(response);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAsync(int id)
+        {
+            var response = await Mediator.Send(new DeleteTodo.Command { Id = id });
+            return Ok(response);
+        }
     }
 }
