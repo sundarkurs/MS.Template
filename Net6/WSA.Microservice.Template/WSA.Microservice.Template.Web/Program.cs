@@ -65,15 +65,13 @@ void ConfigureServices(IServiceCollection services, ConfigurationManager configu
          .AddMicrosoftIdentityWebApp(options =>
          {
              configuration.Bind("Authentication:AzureAdB2C", options);
-             options.Events.OnRedirectToIdentityProvider += OnRedirectToIdentityProvider;
-             options.Events.OnTokenValidated += OnTokenValidated;
-             options.Events.OnRemoteFailure += OnRemoteFailure;
+             options.Events.OnRedirectToIdentityProvider += IdentityEventHandlers.OnRedirectToIdentityProvider;
+             options.Events.OnTokenValidated += IdentityEventHandlers.OnTokenValidated;
+             options.Events.OnRemoteFailure += IdentityEventHandlers.OnRemoteFailure;
          });
 
     services.AddAuthorization(options =>
     {
-        //if (Configuration.GetValue<bool>("EnableTokenPage"))
-        //    options.AddPolicy("AllowTokenView", policy => policy.RequireClaim("Role", "AllowTokenView"));
         options.AddPolicy("AllowTokenView", policy => policy.Requirements.Add(new ViewTokenRequirement(configuration.GetValue<bool>("EnableTokenPage"))));
     });
 
@@ -123,35 +121,5 @@ void ConfigureEndpoints(WebApplication app)
             pattern: "{controller=Home}/{action=Index}/{id?}");
     });
 };
-
-#endregion
-
-#region Azure Authentication Handlers
-
-Task OnRedirectToIdentityProvider(RedirectContext context)
-{
-    //context.ProtocolMessage.DomainHint = "wsa.com";
-    //context.ProtocolMessage.RedirectUri
-    return Task.CompletedTask;
-}
-
-Task OnTokenValidated(TokenValidatedContext context)
-{
-    var identity =
-        new System.Security.Claims.ClaimsIdentity(
-            new List<Claim>
-            {
-                        new System.Security.Claims.Claim("id_token", context.ProtocolMessage.IdToken),
-                        new System.Security.Claims.Claim("access_token", context.ProtocolMessage.AccessToken ?? string.Empty),
-                        new System.Security.Claims.Claim("refresh_token", context.ProtocolMessage.RefreshToken ?? string.Empty)
-            });
-    context.Principal.AddIdentity(identity);
-    return Task.CompletedTask;
-}
-
-Task OnRemoteFailure(RemoteFailureContext arg)
-{
-    throw new NotImplementedException();
-}
 
 #endregion
