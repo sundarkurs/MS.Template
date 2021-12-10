@@ -19,14 +19,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.Domain", "WSA.Microservice.Template.Domain\WSA.Microservice.Template.Domain.csproj", "{AAB0ADB5-77A6-4BA9-928D-DA140F9D3A20}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.Web.Tests", "WSA.Microservice.Template.Web.Tests\WSA.Microservice.Template.Web.Tests.csproj", "{A87F45C1-7D2D-4383-A8BE-F42A935F4058}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.Smoke.Tests", "WSA.Microservice.Template.Smoke.Tests\WSA.Microservice.Template.Smoke.Tests.csproj", "{F57941BF-4F47-4A42-8DD6-458CA21C3AAA}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.SelfHost.Tests", "WSA.Microservice.Template.SelfHost.Tests\WSA.Microservice.Template.SelfHost.Tests.csproj", "{7819CB22-890A-488A-B903-396BA2382045}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.Integration.Tests", "WSA.Microservice.Template.Integration.Tests\WSA.Microservice.Template.Integration.Tests.csproj", "{FF914732-3A2E-445A-A0DA-62B5699F607B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{2CC61EA4-58BF-44D1-BC63-BAF0D97C634C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E5DFFD1B-7B30-4F47-BDF6-BC61FB4B3566}"
@@ -36,7 +28,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.WebJob.InboundProcess", "WSA.Microservice.Template.WebJob.InboundProcess\WSA.Microservice.Template.WebJob.InboundProcess.csproj", "{DD3521B9-AE0B-41E3-A13F-E8CFC5E6907E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSA.Microservice.Template.Infrastructure.Persistence", "WSA.Microservice.Template.Infrastructure.Persistence\WSA.Microservice.Template.Infrastructure.Persistence.csproj", "{E4A74A4F-4F81-4B91-9270-2FDEA8B15AC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.Infrastructure.Persistence", "WSA.Microservice.Template.Infrastructure.Persistence\WSA.Microservice.Template.Infrastructure.Persistence.csproj", "{E4A74A4F-4F81-4B91-9270-2FDEA8B15AC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSA.Microservice.Template.Web.Tests", "WSA.Microservice.Template.Web.Tests\WSA.Microservice.Template.Web.Tests.csproj", "{B08DED07-6038-48E2-AF9F-F1D1009A466F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSA.Microservice.Template.Smoke.Tests", "WSA.Microservice.Template.Smoke.Tests\WSA.Microservice.Template.Smoke.Tests.csproj", "{92A01661-64A8-4E30-9FED-8C94AD96270D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSA.Microservice.Template.SelfHost.Tests", "WSA.Microservice.Template.SelfHost.Tests\WSA.Microservice.Template.SelfHost.Tests.csproj", "{87264F09-B04E-49DD-B6F6-DB1AACE30FE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSA.Microservice.Template.Integration.Tests", "WSA.Microservice.Template.Integration.Tests\WSA.Microservice.Template.Integration.Tests.csproj", "{E2D5E35E-D931-4B51-816E-9C9127D97416}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,22 +56,6 @@ Global
 		{AAB0ADB5-77A6-4BA9-928D-DA140F9D3A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAB0ADB5-77A6-4BA9-928D-DA140F9D3A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAB0ADB5-77A6-4BA9-928D-DA140F9D3A20}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A87F45C1-7D2D-4383-A8BE-F42A935F4058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A87F45C1-7D2D-4383-A8BE-F42A935F4058}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A87F45C1-7D2D-4383-A8BE-F42A935F4058}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A87F45C1-7D2D-4383-A8BE-F42A935F4058}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F57941BF-4F47-4A42-8DD6-458CA21C3AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F57941BF-4F47-4A42-8DD6-458CA21C3AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F57941BF-4F47-4A42-8DD6-458CA21C3AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F57941BF-4F47-4A42-8DD6-458CA21C3AAA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7819CB22-890A-488A-B903-396BA2382045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7819CB22-890A-488A-B903-396BA2382045}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7819CB22-890A-488A-B903-396BA2382045}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7819CB22-890A-488A-B903-396BA2382045}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FF914732-3A2E-445A-A0DA-62B5699F607B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF914732-3A2E-445A-A0DA-62B5699F607B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF914732-3A2E-445A-A0DA-62B5699F607B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF914732-3A2E-445A-A0DA-62B5699F607B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DD3521B9-AE0B-41E3-A13F-E8CFC5E6907E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DD3521B9-AE0B-41E3-A13F-E8CFC5E6907E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD3521B9-AE0B-41E3-A13F-E8CFC5E6907E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -80,6 +64,22 @@ Global
 		{E4A74A4F-4F81-4B91-9270-2FDEA8B15AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4A74A4F-4F81-4B91-9270-2FDEA8B15AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4A74A4F-4F81-4B91-9270-2FDEA8B15AC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B08DED07-6038-48E2-AF9F-F1D1009A466F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B08DED07-6038-48E2-AF9F-F1D1009A466F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B08DED07-6038-48E2-AF9F-F1D1009A466F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B08DED07-6038-48E2-AF9F-F1D1009A466F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A01661-64A8-4E30-9FED-8C94AD96270D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A01661-64A8-4E30-9FED-8C94AD96270D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A01661-64A8-4E30-9FED-8C94AD96270D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A01661-64A8-4E30-9FED-8C94AD96270D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87264F09-B04E-49DD-B6F6-DB1AACE30FE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87264F09-B04E-49DD-B6F6-DB1AACE30FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87264F09-B04E-49DD-B6F6-DB1AACE30FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87264F09-B04E-49DD-B6F6-DB1AACE30FE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2D5E35E-D931-4B51-816E-9C9127D97416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2D5E35E-D931-4B51-816E-9C9127D97416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2D5E35E-D931-4B51-816E-9C9127D97416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2D5E35E-D931-4B51-816E-9C9127D97416}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,12 +92,12 @@ Global
 		{63DBDD6B-84AF-4072-AC10-1B16499A357C} = {B128C5DD-9E76-4E92-BA52-C87C80C22E93}
 		{9ED59E17-430B-4328-B864-D80D71F94F12} = {16D9D0A2-B82C-4BCB-A649-656DB7CEEF03}
 		{AAB0ADB5-77A6-4BA9-928D-DA140F9D3A20} = {16D9D0A2-B82C-4BCB-A649-656DB7CEEF03}
-		{A87F45C1-7D2D-4383-A8BE-F42A935F4058} = {98ADBED6-0809-489D-88C1-597C26ADE175}
-		{F57941BF-4F47-4A42-8DD6-458CA21C3AAA} = {98ADBED6-0809-489D-88C1-597C26ADE175}
-		{7819CB22-890A-488A-B903-396BA2382045} = {98ADBED6-0809-489D-88C1-597C26ADE175}
-		{FF914732-3A2E-445A-A0DA-62B5699F607B} = {98ADBED6-0809-489D-88C1-597C26ADE175}
 		{DD3521B9-AE0B-41E3-A13F-E8CFC5E6907E} = {ACFEEDB1-A740-4621-8824-140DB7B5888C}
 		{E4A74A4F-4F81-4B91-9270-2FDEA8B15AC3} = {08429F69-FAE4-40E7-930C-A9373C8B9074}
+		{B08DED07-6038-48E2-AF9F-F1D1009A466F} = {98ADBED6-0809-489D-88C1-597C26ADE175}
+		{92A01661-64A8-4E30-9FED-8C94AD96270D} = {98ADBED6-0809-489D-88C1-597C26ADE175}
+		{87264F09-B04E-49DD-B6F6-DB1AACE30FE2} = {98ADBED6-0809-489D-88C1-597C26ADE175}
+		{E2D5E35E-D931-4B51-816E-9C9127D97416} = {98ADBED6-0809-489D-88C1-597C26ADE175}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E1C55B19-56BD-4E65-88B0-5ACE58C0C712}
