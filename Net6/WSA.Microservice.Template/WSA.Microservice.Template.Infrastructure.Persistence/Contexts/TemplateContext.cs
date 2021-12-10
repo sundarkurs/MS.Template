@@ -16,13 +16,13 @@ namespace WSA.Microservice.Template.Infrastructure.Persistence.Contexts
 
         public virtual DbSet<Todo> Todos { get; set; } = null!;
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer("Server=tst-identity-eu-n-wdx-sql.database.windows.net;Database=tst-ms-template-sdb;Trusted_Connection=False;Encrypt=True;uid=widex_db@tst-identity-eu-n-wdx-sql;password=W!dex123");
-            }
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    if (!optionsBuilder.IsConfigured)
+        //    {
+        //        optionsBuilder.UseSqlServer("");
+        //    }
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
