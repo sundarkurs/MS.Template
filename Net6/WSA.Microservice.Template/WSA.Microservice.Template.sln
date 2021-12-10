@@ -30,6 +30,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{2CC61EA4-58BF-44D1-BC63-BAF0D97C634C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E5DFFD1B-7B30-4F47-BDF6-BC61FB4B3566}"
+	ProjectSection(SolutionItems) = preProject
+		Steps to generate a project template.txt = Steps to generate a project template.txt
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.WebJob.InboundProcess", "WSA.Microservice.Template.WebJob.InboundProcess\WSA.Microservice.Template.WebJob.InboundProcess.csproj", "{DD3521B9-AE0B-41E3-A13F-E8CFC5E6907E}"
 EndProject
