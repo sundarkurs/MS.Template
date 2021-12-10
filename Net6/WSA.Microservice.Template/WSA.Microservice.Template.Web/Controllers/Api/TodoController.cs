@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WSA.Microservice.Template.Application.Commands.Todo;
+using WSA.Microservice.Template.Application.Commands.Todo.Create;
+using WSA.Microservice.Template.Application.Commands.Todo.Delete;
+using WSA.Microservice.Template.Application.Commands.Todo.Update;
 using WSA.Microservice.Template.Application.Common.DTO;
 using WSA.Microservice.Template.Application.Queries.Todo;
 
@@ -29,21 +31,21 @@ namespace WSA.Microservice.Template.Web.Controllers.Api
         [HttpPost]
         public async Task<IActionResult> CreateAsync(TodoRequest todo)
         {
-            var response = await Mediator.Send(new CreateTodo.Command { Todo = todo });
+            var response = await Mediator.Send(new CreateTodoCommand { Todo = todo });
             return Ok(response);
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateAsync(int id, TodoRequest todo)
         {
-            var response = await Mediator.Send(new UpdateTodo.Command { Id = id, Todo = todo });
+            var response = await Mediator.Send(new UpdateTodoCommand { Id = id, Todo = todo });
             return Ok(response);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
-            var response = await Mediator.Send(new DeleteTodo.Command { Id = id });
+            var response = await Mediator.Send(new DeleteTodoCommand { Id = id });
             return Ok(response);
         }
     }
