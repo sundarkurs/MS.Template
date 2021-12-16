@@ -21,8 +21,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\WSA.Microservice.Template.Web\WSA.Microservice.Template.Web.csproj" />
-  </ItemGroup>
-
 </Project>
