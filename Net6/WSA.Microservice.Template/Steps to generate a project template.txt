@@ -5,6 +5,9 @@ Reference: https://docs.microsoft.com/en-us/visualstudio/ide/how-to-create-multi
 
 - Replace all using statements of external project references with $ext_safeprojectname$
 
+Source: using WSA.Microservice.Template.
+Replace wit: using $ext_safeprojectname$.
+
 Note: after exporting changes can be discarded.
 
 
