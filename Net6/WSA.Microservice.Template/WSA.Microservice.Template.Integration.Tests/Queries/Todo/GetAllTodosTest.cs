@@ -1,13 +1,12 @@
 using AutoMapper;
-using MediatR;
 using Moq;
-using System.Collections.Generic;
 using System.Linq;
 using WSA.Microservice.Template.Application.Common.Interfaces.Repositories;
 using WSA.Microservice.Template.Application.Queries.Todo;
+using WSA.Microservice.Template.Integration.Tests.Mock;
 using Xunit;
 
-namespace WSA.Microservice.Template.Integration.Tests
+namespace WSA.Microservice.Template.Integration.Tests.Queries.Todo
 {
     public class GetAllTodosTest
     {
@@ -30,11 +29,9 @@ namespace WSA.Microservice.Template.Integration.Tests
         {
             // Arrange
 
-            var entities = new List<Domain.Entities.Todo> { new Domain.Entities.Todo { Id = 1, Title = "Test", Description = "Test description" } };
-
             var todoRepo = new Mock<ITodoRepository>();
 
-            todoRepo.Setup(x => x.GetAllAsync()).ReturnsAsync(entities);
+            todoRepo.Setup(x => x.GetAllAsync()).ReturnsAsync(TodoMock.Todos);
 
             var query = new GetAllTodos.Query();
 
