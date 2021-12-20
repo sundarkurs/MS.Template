@@ -12,6 +12,9 @@ namespace WSA.Microservice.Template.Integration.Tests.Commands.Todo
     public class CreateTodoTest
     {
         private static IMapper _mapper;
+        private readonly Mock<ITodoRepository> _todoRepository;
+        private readonly Domain.Entities.Todo _expectedTodo;
+        private readonly CreateTodoCommand _createTodoCommand;
 
         public CreateTodoTest()
         {
@@ -23,45 +26,64 @@ namespace WSA.Microservice.Template.Integration.Tests.Commands.Todo
                 });
                 _mapper = mappingConfig.CreateMapper();
             }
+
+            _todoRepository = new Mock<ITodoRepository>();
+            _expectedTodo = TodoMock.NewTodo;
+            _createTodoCommand = TodoMock.CreateCommand(_expectedTodo.Title, _expectedTodo.Description);
+        }
+
+        [Theory]
+        [InlineData("Meet up", true, true)]
+        [InlineData("Test", false, false)]
+        public async void CreateTodo_Validate_Title(string title, bool expected, bool actual)
+        {
+            _todoRepository.Setup(x => x.IsTitleUniqueAsync(title)).ReturnsAsync(expected);
+
+            var validator = new CreateTodoCommandValidator(_todoRepository.Object);
+
+            // Act
+            var valid = await validator.ValidateAsync(_createTodoCommand);
+
+            // Assert
+            Assert.True(expected == actual);
         }
 
         [Fact]
-        public async void CreateTodo_Success()
+        public async void CreateTodo_ValidInput_CreateSucceed()
         {
             // Arrange
-            var todoRepo = new Mock<ITodoRepository>();
+            _todoRepository.Setup(x => x.AddAsync(It.IsAny<Domain.Entities.Todo>())).ReturnsAsync(_expectedTodo);
 
-            var expected = new Domain.Entities.Todo()
-            {
-                Id = 1,
-                Title = "Test",
-                Description = "Test"
-            };
+            var validator = new CreateTodoCommandValidator(_todoRepository.Object);
 
-            todoRepo.Setup(x => x.AddAsync(It.IsAny<Domain.Entities.Todo>())).ReturnsAsync(expected);
-
-            todoRepo.Setup(x => x.IsTitleUniqueAsync(expected.Title)).ReturnsAsync(true);
-
-            var command = new CreateTodoCommand
-            {
-                Todo = new Application.Common.DTO.TodoRequest { Title = expected.Title, Description = expected.Description }
-            };
-
-            var validator = new CreateTodoCommandValidator(todoRepo.Object);
-
-            var handler = new CreateTodoCommandHandler(todoRepo.Object, _mapper);
+            var handler = new CreateTodoCommandHandler(_todoRepository.Object, _mapper);
 
             // Act
-            var valid = validator.Validate(command).IsValid;
-            var response = await handler.Handle(command, new System.Threading.CancellationToken());
+            var response = await handler.Handle(_createTodoCommand, new System.Threading.CancellationToken());
 
             // Assert
-            Assert.True(valid);
             Assert.NotNull(response);
             Assert.True(response.Succeeded);
             Assert.NotNull(response.Data);
-            Assert.Equal(expected.Title, response.Data.Title);
+            Assert.Equal(_expectedTodo.Title, response.Data.Title);
 
+        }
+
+        [Fact]
+        public async void CreateTodo_AddFails_CreateFails()
+        {
+            // Arrange
+            _todoRepository.Setup(x => x.AddAsync(It.IsAny<Domain.Entities.Todo>())).ReturnsAsync((Domain.Entities.Todo)null);
+
+            var validator = new CreateTodoCommandValidator(_todoRepository.Object);
+
+            var handler = new CreateTodoCommandHandler(_todoRepository.Object, _mapper);
+
+            // Act
+            var response = await handler.Handle(_createTodoCommand, new System.Threading.CancellationToken());
+
+            // Assert
+            Assert.Null(response.Data);
         }
     }
 }
