@@ -29,7 +29,6 @@ namespace WSA.Microservice.Template.Integration.Tests.Commands.Todo
         public async void CreateTodo_Success()
         {
             // Arrange
-
             var todoRepo = new Mock<ITodoRepository>();
 
             var expected = new Domain.Entities.Todo()
@@ -41,7 +40,7 @@ namespace WSA.Microservice.Template.Integration.Tests.Commands.Todo
 
             todoRepo.Setup(x => x.AddAsync(It.IsAny<Domain.Entities.Todo>())).ReturnsAsync(expected);
 
-            todoRepo.Setup(x => x.IsTitleUniqueAsync(expected.Title)).ReturnsAsync(false);
+            todoRepo.Setup(x => x.IsTitleUniqueAsync(expected.Title)).ReturnsAsync(true);
 
             var command = new CreateTodoCommand
             {
@@ -53,10 +52,11 @@ namespace WSA.Microservice.Template.Integration.Tests.Commands.Todo
             var handler = new CreateTodoCommandHandler(todoRepo.Object, _mapper);
 
             // Act
+            var valid = validator.Validate(command).IsValid;
             var response = await handler.Handle(command, new System.Threading.CancellationToken());
 
             // Assert
-
+            Assert.True(valid);
             Assert.NotNull(response);
             Assert.True(response.Succeeded);
             Assert.NotNull(response.Data);
