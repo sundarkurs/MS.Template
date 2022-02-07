@@ -48,11 +48,5 @@ namespace WSA.Microservice.Template.Application.Tests.Commands.Todo
             Assert.True(response.Succeeded);
             Assert.NotNull(response.Data);
         }
-
-        [Fact]
-        public async void UpdateTodo_InvalidTodo_ReturnsError()
-        {
-
-        }
     }
 }

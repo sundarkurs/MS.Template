@@ -45,11 +45,5 @@ namespace WSA.Microservice.Template.Application.Tests.Queries.Todo
             Assert.NotNull(response.Data);
             Assert.Equal(response.Data.Title, TodoMock.TodoEntity.Title);
         }
-
-        [Fact]
-        public async void GetTodo_InvalidTodoIdentifier_ReturnsNoData()
-        {
-
-        }
     }
 }

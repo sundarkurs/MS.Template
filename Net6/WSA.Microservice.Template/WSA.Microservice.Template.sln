@@ -41,6 +41,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", 
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{CF2E58BB-1EDA-4E45-8A2A-8EAA38FC070F}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\todo-db-script.sql = Scripts\todo-db-script.sql
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DevOps", "DevOps", "{63536C67-58D3-4A78-BEC6-CF19EC784DE8}"
 EndProject

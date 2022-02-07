@@ -47,12 +47,5 @@ namespace WSA.Microservice.Template.Application.Tests.Commands.Todo
             Assert.NotNull(response.Data);
             Assert.Equal(_entity.Title, response.Data.Title);
         }
-
-        [Fact]
-        public async void CreateTodo_DuplicateTodo_ReturnsError()
-        {
-
-        }
-
     }
 }

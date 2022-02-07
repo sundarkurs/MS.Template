@@ -8,9 +8,9 @@ namespace WSA.Microservice.Template.Application.Common.Interfaces.Repositories
 
         Task<T> GetByIdAsync(Guid id);
 
-        Task<IReadOnlyList<T>> GetAllAsync();
+        Task<List<T>> GetAllAsync();
 
-        Task<IReadOnlyList<T>> GetPagedReponseAsync(int pageNumber, int pageSize);
+        Task<List<T>> GetPagedReponseAsync(int pageNumber, int pageSize);
 
         Task<T> AddAsync(T entity);
 

@@ -24,7 +24,7 @@ namespace WSA.Microservice.Template.Infrastructure.Persistence.Repositories
             return await _dbContext.Set<T>().FindAsync(id);
         }
 
-        public async Task<IReadOnlyList<T>> GetPagedReponseAsync(int pageNumber, int pageSize)
+        public async Task<List<T>> GetPagedReponseAsync(int pageNumber, int pageSize)
         {
             return await _dbContext
                 .Set<T>()
@@ -53,7 +53,7 @@ namespace WSA.Microservice.Template.Infrastructure.Persistence.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<IReadOnlyList<T>> GetAllAsync()
+        public async Task<List<T>> GetAllAsync()
         {
             return await _dbContext
                  .Set<T>()

@@ -12,7 +12,6 @@ namespace WSA.Microservice.Template.Application.Tests.Queries.Todo
     {
         private static IMapper _mapper;
         private readonly Mock<ITodoRepository> _repository;
-        private readonly Domain.Entities.Todo _entity;
 
         public GetAllTodosTest()
         {
@@ -32,7 +31,7 @@ namespace WSA.Microservice.Template.Application.Tests.Queries.Todo
         public async void GetAllTodos_ReturnsData()
         {
             // Arrange
-            _repository.Setup(x => x.GetAllAsync()).Returns(TodoMock.Todos);
+            _repository.Setup(x => x.GetAllAsync()).ReturnsAsync(TodoMock.ListOfTodos);
             var query = TodoMock.MockGetAllTodosQuery();
             var handler = new GetAllTodos.Handler(_repository.Object, _mapper);
 
@@ -43,7 +42,7 @@ namespace WSA.Microservice.Template.Application.Tests.Queries.Todo
             Assert.NotNull(response);
             Assert.True(response.Succeeded);
             Assert.NotNull(response.Data);
-            Assert.Equal(response.Data.ToList().Count, TodoMock.Todos().Count);
+            Assert.Equal(response.Data.ToList().Count, TodoMock.ListOfTodos().Count);
         }
     }
 }

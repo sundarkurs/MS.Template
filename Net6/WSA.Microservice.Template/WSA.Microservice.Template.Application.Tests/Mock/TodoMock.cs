@@ -48,7 +48,7 @@ namespace WSA.Microservice.Template.Application.Tests.Mock
             return new GetTodo.Query() { Id = id };
         }
 
-        public static List<Domain.Entities.Todo> Todos()
+        public static List<Domain.Entities.Todo> ListOfTodos()
         {
             return new List<Domain.Entities.Todo>
             {
