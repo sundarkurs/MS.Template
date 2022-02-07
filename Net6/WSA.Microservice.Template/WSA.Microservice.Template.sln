@@ -30,13 +30,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.Infrastructure.Persistence", "WSA.Microservice.Template.Infrastructure.Persistence\WSA.Microservice.Template.Infrastructure.Persistence.csproj", "{E4A74A4F-4F81-4B91-9270-2FDEA8B15AC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSA.Microservice.Template.Web.Tests", "WSA.Microservice.Template.Web.Tests\WSA.Microservice.Template.Web.Tests.csproj", "{B08DED07-6038-48E2-AF9F-F1D1009A466F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.Web.Tests", "WSA.Microservice.Template.Web.Tests\WSA.Microservice.Template.Web.Tests.csproj", "{B08DED07-6038-48E2-AF9F-F1D1009A466F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSA.Microservice.Template.Smoke.Tests", "WSA.Microservice.Template.Smoke.Tests\WSA.Microservice.Template.Smoke.Tests.csproj", "{92A01661-64A8-4E30-9FED-8C94AD96270D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.Smoke.Tests", "WSA.Microservice.Template.Smoke.Tests\WSA.Microservice.Template.Smoke.Tests.csproj", "{92A01661-64A8-4E30-9FED-8C94AD96270D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSA.Microservice.Template.SelfHost.Tests", "WSA.Microservice.Template.SelfHost.Tests\WSA.Microservice.Template.SelfHost.Tests.csproj", "{87264F09-B04E-49DD-B6F6-DB1AACE30FE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.SelfHost.Tests", "WSA.Microservice.Template.SelfHost.Tests\WSA.Microservice.Template.SelfHost.Tests.csproj", "{87264F09-B04E-49DD-B6F6-DB1AACE30FE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSA.Microservice.Template.Integration.Tests", "WSA.Microservice.Template.Integration.Tests\WSA.Microservice.Template.Integration.Tests.csproj", "{E2D5E35E-D931-4B51-816E-9C9127D97416}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.Integration.Tests", "WSA.Microservice.Template.Integration.Tests\WSA.Microservice.Template.Integration.Tests.csproj", "{E2D5E35E-D931-4B51-816E-9C9127D97416}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSA.Microservice.Template.Application.Tests", "WSA.Microservice.Template.Application.Tests\WSA.Microservice.Template.Application.Tests.csproj", "{C1538C88-9D34-42EB-8246-81911A46F2AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,6 +82,10 @@ Global
 		{E2D5E35E-D931-4B51-816E-9C9127D97416}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2D5E35E-D931-4B51-816E-9C9127D97416}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2D5E35E-D931-4B51-816E-9C9127D97416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1538C88-9D34-42EB-8246-81911A46F2AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1538C88-9D34-42EB-8246-81911A46F2AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1538C88-9D34-42EB-8246-81911A46F2AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1538C88-9D34-42EB-8246-81911A46F2AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,6 +104,7 @@ Global
 		{92A01661-64A8-4E30-9FED-8C94AD96270D} = {98ADBED6-0809-489D-88C1-597C26ADE175}
 		{87264F09-B04E-49DD-B6F6-DB1AACE30FE2} = {98ADBED6-0809-489D-88C1-597C26ADE175}
 		{E2D5E35E-D931-4B51-816E-9C9127D97416} = {98ADBED6-0809-489D-88C1-597C26ADE175}
+		{C1538C88-9D34-42EB-8246-81911A46F2AB} = {98ADBED6-0809-489D-88C1-597C26ADE175}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E1C55B19-56BD-4E65-88B0-5ACE58C0C712}
