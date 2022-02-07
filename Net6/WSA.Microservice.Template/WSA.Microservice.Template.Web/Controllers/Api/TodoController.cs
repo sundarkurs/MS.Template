@@ -4,9 +4,11 @@ using WSA.Microservice.Template.Application.Commands.Todo.Delete;
 using WSA.Microservice.Template.Application.Commands.Todo.Update;
 using WSA.Microservice.Template.Application.Common.DTO;
 using WSA.Microservice.Template.Application.Queries.Todo;
+using WSA.Microservice.Template.Web.Attributes;
 
 namespace WSA.Microservice.Template.Web.Controllers.Api
 {
+    //[TokenAuthorize]
     public class TodoController : BaseApiController
     {
         private readonly ILogger<TodoController> _logger;
