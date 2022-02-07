@@ -3,11 +3,11 @@ using WSA.Microservice.Template.Application.Common.Interfaces.Repositories;
 
 namespace WSA.Microservice.Template.Application.Commands.Todo.Update
 {
-    public class UpdateTodoValidator : AbstractValidator<UpdateTodoCommand>
+    public class UpdateTodoCommandValidator : AbstractValidator<UpdateTodoCommand>
     {
         private readonly ITodoRepository _todoRepository;
 
-        public UpdateTodoValidator(ITodoRepository todoRepository)
+        public UpdateTodoCommandValidator(ITodoRepository todoRepository)
         {
             _todoRepository = todoRepository;
 

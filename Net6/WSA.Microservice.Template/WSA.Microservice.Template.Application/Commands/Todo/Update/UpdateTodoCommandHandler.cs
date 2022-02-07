@@ -7,12 +7,12 @@ using WSA.Microservice.Template.Application.Common.Wrappers;
 
 namespace WSA.Microservice.Template.Application.Commands.Todo.Update
 {
-    public class UpdateTodoHandler : IRequestHandler<UpdateTodoCommand, Response<TodoDto>>
+    public class UpdateTodoCommandHandler : IRequestHandler<UpdateTodoCommand, Response<TodoDto>>
     {
         private readonly ITodoRepository _todoRepository;
         private readonly IMapper _mapper;
 
-        public UpdateTodoHandler(ITodoRepository todoRepository, IMapper mapper)
+        public UpdateTodoCommandHandler(ITodoRepository todoRepository, IMapper mapper)
         {
             _todoRepository = todoRepository;
             _mapper = mapper;

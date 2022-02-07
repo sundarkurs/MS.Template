@@ -5,11 +5,11 @@ using WSA.Microservice.Template.Application.Common.Wrappers;
 
 namespace WSA.Microservice.Template.Application.Commands.Todo.Delete
 {
-    public class DeleteTodoHandler : IRequestHandler<DeleteTodoCommand, Response<bool>>
+    public class DeleteTodoCommandHandler : IRequestHandler<DeleteTodoCommand, Response<bool>>
     {
         private readonly ITodoRepository _todoRepository;
 
-        public DeleteTodoHandler(ITodoRepository todoRepository)
+        public DeleteTodoCommandHandler(ITodoRepository todoRepository)
         {
             _todoRepository = todoRepository;
         }
