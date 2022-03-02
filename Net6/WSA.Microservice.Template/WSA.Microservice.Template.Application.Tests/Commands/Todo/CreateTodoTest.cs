@@ -54,12 +54,14 @@ namespace WSA.Microservice.Template.Application.Tests.Commands.Todo
             Assert.Equal(_entity.Title, response.Data.Title);
         }
 
-        [Fact]
-        public async void CreateTodo_DuplicateTitle_ThrowsValidationError()
+        [Theory]
+        [InlineData("Meet up", true, true)]
+        [InlineData("Test", false, false)]
+        public async void CreateTodo_Validate_Title(string title, bool isValidExpected, bool isValidActual)
         {
             // Arrange
             _repository.Setup(x => x.AddAsync(It.IsAny<Domain.Entities.Todo>())).ReturnsAsync(_entity);
-            _repository.Setup(x => x.IsTitleUniqueAsync(_entity.Title)).ReturnsAsync(false);
+            _repository.Setup(x => x.IsTitleUniqueAsync(title)).ReturnsAsync(isValidExpected);
 
             var model = TodoMock.TodoModel;
             var command = TodoMock.GetCreateTodoCommand(model);
@@ -71,8 +73,12 @@ namespace WSA.Microservice.Template.Application.Tests.Commands.Todo
 
             // Assert
             Assert.NotNull(validationResult);
-            Assert.False(validationResult.IsValid);
-            Assert.Equal("Todo Title already exists.", validationResult.Errors[0].ErrorMessage);
+            Assert.True(isValidActual == validationResult.IsValid);
+            if (!validationResult.IsValid)
+            {
+                Assert.Equal("Todo Title already exists.", validationResult.Errors[0].ErrorMessage);
+            }
+
         }
     }
 }
