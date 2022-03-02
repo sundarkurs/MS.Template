@@ -1,0 +1,81 @@
+Reference: 
+https://docs.microsoft.com/en-us/visualstudio/ide/how-to-create-multi-project-templates?view=vs-2022
+
+
+Multi Project Template
+-----------------------
+
+Use token replacer to generate the using statements as per the project being created. 
+Follow below steps before you export each project as a template.
+
+1) Replace all using statements of project namespace with $ext_safeprojectname$
+
+Source: using WSA.Microservice.Template.
+Replace with: using $ext_safeprojectname$.
+
+Note: after exporting changes can be discarded, otherwise build will fail for the template solution.
+
+
+2) Export Projects as template (Go to next section)
+
+
+3) After exporting solution projects as project templates.
+
+- Edit each project to replace the external project references with the project name
+- Use $ext_safeprojectname$ parameter to replace the project reference with new project name being created.
+
+From below
+-----------
+<ItemGroup>
+    <ProjectReference Include="..\WSA.Microservice.Template.Domain\WSA.Microservice.Template.Domain.csproj" />
+</ItemGroup>
+
+To as below,
+------------
+<ItemGroup>
+    <ProjectReference Include="..\$ext_safeprojectname$.Domain\$ext_safeprojectname$.Domain.csproj" />
+</ItemGroup>
+
+
+Export project as a template
+----------------------------
+
+1) On the Project menu, choose Export Template.
+The Export Template Wizard opens.
+
+2) On the Choose Template Type wizard, 
+> Select Project Template. 
+> Select one of the project that you want to export to a template, and then choose Next. 
+
+
+3) On the Select Template Options page, 
+> Enter a name 
+> Optional description, icon, and preview image for your template. 
+> Choose Finish.
+
+The project is exported as a .zip file and placed in the "..\"Visual Studio 2022\My Exported Templates"."
+
+Note: Each project must be exported to a template separately, 
+so repeat the preceding steps for each project in the solution.
+
+
+Creating a Template
+--------------------
+
+1) Create a folder and copya all the .zip files exported in the previous section
+
+2) Extract the contents of .zip folders.
+
+3) In the base directory, create an XML file with a .vstemplate file extension. 
+This file contains the metadata for the multi-project template. 
+See the example that follows for the structure of the file. 
+Be sure to specify the relative path to each project's .vstemplate file.
+
+4) Select all the files in the base directory, and from the right-click or context menu, choose Send to > Compressed (zipped) folder.
+
+The files and folders are compressed into a .zip file.
+
+5) Copy the .zip file into the user project template directory. 
+By default, this directory is %USERPROFILE%\Documents\Visual Studio <version>\Templates\ProjectTemplates.
+
+6) In Visual Studio, choose File > New > Project and verify that your template appears.
