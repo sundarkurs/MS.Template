@@ -33,11 +33,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.Integration.Tests", "WSA.Microservice.Template.Integration.Tests\WSA.Microservice.Template.Integration.Tests.csproj", "{E2D5E35E-D931-4B51-816E-9C9127D97416}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSA.Microservice.Template.Application.Tests", "WSA.Microservice.Template.Application.Tests\WSA.Microservice.Template.Application.Tests.csproj", "{C1538C88-9D34-42EB-8246-81911A46F2AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSA.Microservice.Template.Application.Tests", "WSA.Microservice.Template.Application.Tests\WSA.Microservice.Template.Application.Tests.csproj", "{C1538C88-9D34-42EB-8246-81911A46F2AB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{C37A8B16-E397-47D9-8970-681A716E2EBD}"
 	ProjectSection(SolutionItems) = preProject
-		Refeernces\Steps to generate a project template.txt = Refeernces\Steps to generate a project template.txt
+		References\templates\Steps to generate a project template.txt = References\templates\Steps to generate a project template.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{CF2E58BB-1EDA-4E45-8A2A-8EAA38FC070F}"
